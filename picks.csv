@@ -1,0 +1,91 @@
+person,matchup_id,description,team1,team2,pick,games
+Aaron,west_r1_avs_kings,West R1: Avalanche vs Kings,Avalanche,Kings,Avalanche,6
+Aaron,west_r1_stars_wild,West R1: Stars vs Wild,Stars,Wild,Stars,6
+Aaron,west_r1_gk_mammoth,West R1: Golden Knights vs Mammoth,Golden Knights,Mammoth,Golden Knights,6
+Aaron,west_r1_oilers_ducks,West R1: Oilers vs Ducks,Oilers,Ducks,Oilers,6
+Aaron,west_r2_upper,West R2 (Avs/Kings vs Stars/Wild winner),Avalanche,Stars,Avalanche,6
+Aaron,west_r2_lower,West R2 (GK/Mammoth vs Oilers/Ducks winner),Golden Knights,Oilers,Golden Knights,6
+Aaron,west_r3,West Conference Final,Avalanche,Golden Knights,Avalanche,6
+Aaron,east_r1_buf_bos,East R1: Buffalo vs Bruins,Buffalo,Bruins,Bruins,6
+Aaron,east_r1_tbl_mtl,East R1: Lightning vs Canadiens,Lightning,Canadiens,Lightning,6
+Aaron,east_r1_car_ott,East R1: Hurricanes vs Senators,Hurricanes,Senators,Hurricanes,6
+Aaron,east_r1_pit_phi,East R1: Penguins vs Flyers,Penguins,Flyers,Flyers,6
+Aaron,east_r2_upper,East R2 (Buf/Bos vs TBL/MTL winner),Bruins,Lightning,Lightning,6
+Aaron,east_r2_lower,East R2 (CAR/OTT vs PIT/PHI winner),Hurricanes,Flyers,Hurricanes,6
+Aaron,east_r3,East Conference Final,Lightning,Hurricanes,Lightning,6
+Aaron,cup,Stanley Cup Final,Avalanche,Lightning,Avalanche,6
+Eric,west_r1_avs_kings,West R1: Avalanche vs Kings,Avalanche,Kings,Avalanche,6
+Eric,west_r1_stars_wild,West R1: Stars vs Wild,Stars,Wild,Wild,5
+Eric,west_r1_gk_mammoth,West R1: Golden Knights vs Mammoth,Golden Knights,Mammoth,Golden Knights,6
+Eric,west_r1_oilers_ducks,West R1: Oilers vs Ducks,Oilers,Ducks,Oilers,6
+Eric,west_r2_upper,West R2 (Avs/Kings vs Stars/Wild winner),Avalanche,Wild,Wild,7
+Eric,west_r2_lower,West R2 (GK/Mammoth vs Oilers/Ducks winner),Golden Knights,Oilers,Oilers,7
+Eric,west_r3,West Conference Final,Oilers,Wild,Wild,7
+Eric,east_r1_buf_bos,East R1: Buffalo vs Bruins,Buffalo,Bruins,Buffalo,7
+Eric,east_r1_tbl_mtl,East R1: Lightning vs Canadiens,Lightning,Canadiens,Canadiens,6
+Eric,east_r1_car_ott,East R1: Hurricanes vs Senators,Hurricanes,Senators,Hurricanes,5
+Eric,east_r1_pit_phi,East R1: Penguins vs Flyers,Penguins,Flyers,Penguins,7
+Eric,east_r2_upper,East R2 (Buf/Bos vs TBL/MTL winner),Buffalo,Canadiens,Canadiens,6
+Eric,east_r2_lower,East R2 (CAR/OTT vs PIT/PHI winner),Penguins,Hurricanes,Hurricanes,7
+Eric,east_r3,East Conference Final,Canadiens,Hurricanes,Canadiens,7
+Eric,cup,Stanley Cup Final,Wild,Canadiens,Canadiens,6
+Ryan,west_r1_avs_kings,West R1: Avalanche vs Kings,Avalanche,Kings,Avalanche,6
+Ryan,west_r1_stars_wild,West R1: Stars vs Wild,Stars,Wild,Wild,7
+Ryan,west_r1_gk_mammoth,West R1: Golden Knights vs Mammoth,Golden Knights,Mammoth,Golden Knights,7
+Ryan,west_r1_oilers_ducks,West R1: Oilers vs Ducks,Oilers,Ducks,Oilers,5
+Ryan,west_r2_upper,West R2 (Avs/Kings vs Stars/Wild winner),Avalanche,Wild,Avalanche,6
+Ryan,west_r2_lower,West R2 (GK/Mammoth vs Oilers/Ducks winner),Golden Knights,Oilers,Oilers,7
+Ryan,west_r3,West Conference Final,Avalanche,Oilers,Oilers,7
+Ryan,east_r1_buf_bos,East R1: Buffalo vs Bruins,Buffalo,Bruins,Buffalo,6
+Ryan,east_r1_tbl_mtl,East R1: Lightning vs Canadiens,Lightning,Canadiens,Canadiens,7
+Ryan,east_r1_car_ott,East R1: Hurricanes vs Senators,Hurricanes,Senators,Hurricanes,5
+Ryan,east_r1_pit_phi,East R1: Penguins vs Flyers,Penguins,Flyers,Flyers,6
+Ryan,east_r2_upper,East R2 (Buf/Bos vs TBL/MTL winner),Buffalo,Canadiens,Canadiens,7
+Ryan,east_r2_lower,East R2 (CAR/OTT vs PIT/PHI winner),Hurricanes,Flyers,Hurricanes,6
+Ryan,east_r3,East Conference Final,Canadiens,Hurricanes,Hurricanes,6
+Ryan,cup,Stanley Cup Final,Oilers,Hurricanes,Oilers,7
+Luke,west_r1_avs_kings,West R1: Avalanche vs Kings,Avalanche,Kings,Avalanche,4
+Luke,west_r1_stars_wild,West R1: Stars vs Wild,Stars,Wild,Wild,5
+Luke,west_r1_gk_mammoth,West R1: Golden Knights vs Mammoth,Golden Knights,Mammoth,Golden Knights,6
+Luke,west_r1_oilers_ducks,West R1: Oilers vs Ducks,Oilers,Ducks,Oilers,6
+Luke,west_r2_upper,West R2 (Avs/Kings vs Stars/Wild winner),Avalanche,Wild,Avalanche,6
+Luke,west_r2_lower,West R2 (GK/Mammoth vs Oilers/Ducks winner),Golden Knights,Oilers,Oilers,7
+Luke,west_r3,West Conference Final,Avalanche,Oilers,Avalanche,6
+Luke,east_r1_buf_bos,East R1: Buffalo vs Bruins,Buffalo,Bruins,Buffalo,6
+Luke,east_r1_tbl_mtl,East R1: Lightning vs Canadiens,Lightning,Canadiens,Canadiens,6
+Luke,east_r1_car_ott,East R1: Hurricanes vs Senators,Hurricanes,Senators,Hurricanes,5
+Luke,east_r1_pit_phi,East R1: Penguins vs Flyers,Penguins,Flyers,Penguins,7
+Luke,east_r2_upper,East R2 (Buf/Bos vs TBL/MTL winner),Buffalo,Canadiens,Canadiens,6
+Luke,east_r2_lower,East R2 (CAR/OTT vs PIT/PHI winner),Hurricanes,Penguins,Hurricanes,
+Luke,east_r3,East Conference Final,Canadiens,Hurricanes,Hurricanes,6
+Luke,cup,Stanley Cup Final,Avalanche,Hurricanes,Avalanche,6
+Mark,west_r1_avs_kings,West R1: Avalanche vs Kings,Avalanche,Kings,Avalanche,5
+Mark,west_r1_stars_wild,West R1: Stars vs Wild,Stars,Wild,Wild,7
+Mark,west_r1_gk_mammoth,West R1: Golden Knights vs Mammoth,Golden Knights,Mammoth,Golden Knights,6
+Mark,west_r1_oilers_ducks,West R1: Oilers vs Ducks,Oilers,Ducks,Oilers,6
+Mark,west_r2_upper,West R2 (Avs/Kings vs Stars/Wild winner),Avalanche,Wild,Wild,4
+Mark,west_r2_lower,West R2 (GK/Mammoth vs Oilers/Ducks winner),Golden Knights,Oilers,Oilers,7
+Mark,west_r3,West Conference Final,Wild,Oilers,Oilers,6
+Mark,east_r1_buf_bos,East R1: Buffalo vs Bruins,Buffalo,Bruins,Buffalo,6
+Mark,east_r1_tbl_mtl,East R1: Lightning vs Canadiens,Lightning,Canadiens,Canadiens,7
+Mark,east_r1_car_ott,East R1: Hurricanes vs Senators,Hurricanes,Senators,Hurricanes,6
+Mark,east_r1_pit_phi,East R1: Penguins vs Flyers,Penguins,Flyers,Penguins,4
+Mark,east_r2_upper,East R2 (Buf/Bos vs TBL/MTL winner),Buffalo,Canadiens,Canadiens,5
+Mark,east_r2_lower,East R2 (CAR/OTT vs PIT/PHI winner),Hurricanes,Penguins,Hurricanes,6
+Mark,east_r3,East Conference Final,Canadiens,Hurricanes,Canadiens,7
+Mark,cup,Stanley Cup Final,Oilers,Canadiens,Oilers,4
+Don,west_r1_avs_kings,West R1: Avalanche vs Kings,Avalanche,Kings,Kings,7
+Don,west_r1_stars_wild,West R1: Stars vs Wild,Stars,Wild,Stars,5
+Don,west_r1_gk_mammoth,West R1: Golden Knights vs Mammoth,Golden Knights,Mammoth,Golden Knights,5
+Don,west_r1_oilers_ducks,West R1: Oilers vs Ducks,Oilers,Ducks,Oilers,4
+Don,west_r2_upper,West R2 (Avs/Kings vs Stars/Wild winner),Kings,Stars,Stars,6
+Don,west_r2_lower,West R2 (GK/Mammoth vs Oilers/Ducks winner),Golden Knights,Oilers,Oilers,6
+Don,west_r3,West Conference Final,Stars,Oilers,Oilers,6
+Don,east_r1_buf_bos,East R1: Buffalo vs Bruins,Buffalo,Bruins,Bruins,6
+Don,east_r1_tbl_mtl,East R1: Lightning vs Canadiens,Lightning,Canadiens,Canadiens,5
+Don,east_r1_car_ott,East R1: Hurricanes vs Senators,Hurricanes,Senators,Senators,5
+Don,east_r1_pit_phi,East R1: Penguins vs Flyers,Penguins,Flyers,Penguins,6
+Don,east_r2_upper,East R2 (Buf/Bos vs TBL/MTL winner),Bruins,Canadiens,Canadiens,7
+Don,east_r2_lower,East R2 (CAR/OTT vs PIT/PHI winner),Senators,Penguins,Penguins,5
+Don,east_r3,East Conference Final,Canadiens,Penguins,Penguins,5
+Don,cup,Stanley Cup Final,Oilers,Penguins,Penguins,7
