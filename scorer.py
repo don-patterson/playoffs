@@ -338,9 +338,10 @@ def render_html(
     season: int = 20252026,
     out_path: str = "index.html",
 ) -> None:
-    from datetime import datetime, timezone
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
     ranked = sorted(scores.items(), key=lambda x: x[1]["total"], reverse=True)
-    updated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    updated = datetime.now(ZoneInfo("America/Halifax")).strftime("%Y-%m-%d %H:%M AT")
 
     # Ordered list of matchup IDs (same order as picks CSV)
     all_mids: list[str] = []
