@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 scorer.py — Score playoff pool picks against real NHL results.
 
@@ -8,16 +9,12 @@ Scoring:
 
 Data source: NHL API  https://api-web.nhle.com/v1/playoff-series/carousel/{season}
 
-Usage:
-  python3 scorer.py
-  python3 scorer.py --season 20252026   # explicit season
-  python3 scorer.py --json              # machine-readable JSON output
 """
 
-import argparse
 import csv
 import json
 import urllib.request
+import sys
 
 # ---------------------------------------------------------------------------
 # NHL abbreviation → canonical team name (must match playoffs.py aliases)
@@ -131,6 +128,7 @@ def fetch_series_results(season: int = 20252026) -> dict[str, dict]:
     data = _fetch_json(
         f"https://api-web.nhle.com/v1/playoff-series/carousel/{season}"
     )
+    json.dump(data, sys.stderr, indent=2)
 
     # First pass: collect all series from the API keyed by (round, letter)
     raw_series: dict[str, dict] = {}  # series_letter → raw data
@@ -212,10 +210,7 @@ POINTS_CORRECT_GAMES = 1
 POINTS_CUP_WINNER = 3
 
 
-def score_picks(
-    picks: dict,
-    results: dict[str, dict],
-) -> dict[str, dict]:
+def score_picks(picks: dict, results: dict[str, dict]) -> dict[str, dict]:
     """
     Score each person's picks against completed series results.
 
@@ -514,80 +509,13 @@ def render_html(
 
 
 # ---------------------------------------------------------------------------
-# Display
-# ---------------------------------------------------------------------------
-
-def print_scoreboard(scores: dict, results: dict) -> None:
-    # Sort by total points descending
-    ranked = sorted(scores.items(), key=lambda x: x[1]["total"], reverse=True)
-
-    print("\n=== PLAYOFF POOL SCOREBOARD ===\n")
-    print(f"{'Rank':<5} {'Name':<10} {'Points':>6}")
-    print("-" * 25)
-    for rank, (name, data) in enumerate(ranked, 1):
-        print(f"{rank:<5} {name:<10} {data['total']:>6}")
-
-    print("\n=== SERIES RESULTS (completed) ===\n")
-    completed = {mid: r for mid, r in results.items() if r["complete"]}
-    if not completed:
-        print("  No series completed yet.\n")
-    else:
-        for mid, r in completed.items():
-            print(f"  {mid}: {r['winner']} in {r['total_games']}")
-
-    print("\n=== PICK-BY-PICK BREAKDOWN ===\n")
-    for name, data in ranked:
-        print(f"── {name} ({data['total']} pts) ──")
-        for mid, b in data["breakdown"].items():
-            if not b["complete"]:
-                continue  # skip pending series
-            result_str = f"{b['actual_winner']} in {b['actual_games']}"
-            pick_str = f"{b['pick']} in {b['games_pick']}" if b["games_pick"] else str(b["pick"])
-            mark = "✓" if b["pts_team"] > 0 else "✗"
-            pts_detail = []
-            if b["pts_team"]:
-                pts_detail.append(f"+{b['pts_team']} team")
-            if b["pts_games"]:
-                pts_detail.append(f"+{b['pts_games']} games")
-            if b["pts_cup_bonus"]:
-                pts_detail.append(f"+{b['pts_cup_bonus']} cup bonus")
-            pts_str = ", ".join(pts_detail) if pts_detail else "0 pts"
-            print(f"  {mark} {b['description']}")
-            print(f"      pick: {pick_str:<25}  actual: {result_str:<20}  [{pts_str}]")
-        print()
-
-
-# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Score NHL playoff pool picks.")
-    parser.add_argument(
-        "--season", type=int, default=20252026,
-        help="NHL season ID (default: 20252026)"
-    )
-    parser.add_argument(
-        "--json", action="store_true",
-        help="Output scores as JSON instead of formatted text"
-    )
-    parser.add_argument(
-        "--html", metavar="FILE", nargs="?", const="index.html",
-        help="Write a static HTML scoreboard (default: index.html)"
-    )
-    args = parser.parse_args()
-
-    print(f"Fetching playoff results for season {args.season}...")
-    results = fetch_series_results(args.season)
-
+    print(f"Fetching results...")
+    results = fetch_series_results(20252026)
     picks = load_picks_csv()
-    print(f"Loaded picks for: {', '.join(picks)}")
-
     scores = score_picks(picks, results)
 
-    if args.json:
-        print(json.dumps(scores, indent=2, ensure_ascii=False))
-    elif args.html:
-        render_html(scores, results, season=args.season, out_path=args.html)
-    else:
-        print_scoreboard(scores, results)
+    render_html(scores, results, season=20252026, out_path="index.html")
