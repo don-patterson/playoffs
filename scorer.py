@@ -430,10 +430,12 @@ def render_html(
         person_sections += f"""
 <section id='{name.lower()}' class='person-card'>
   <h2>{name} <span class='total-pts'>{data['total']} pts</span></h2>
+  <div class="table-wrap">
   <table>
     <thead><tr><th>Series</th><th>Your pick</th><th>Result</th><th>Pts</th></tr></thead>
     <tbody>{pick_rows}</tbody>
   </table>
+  </div>
 </section>
 """
 
@@ -468,9 +470,9 @@ def render_html(
                 padding: 0.1rem 0.6rem; font-size: 0.85rem; font-weight: 700; }}
   section {{ margin-bottom: 1rem; }}
   /* Scoreboard */
-  #scoreboard table, .person-card table {{
-    width: 100%; border-collapse: collapse; margin-bottom: 1rem;
-  }}
+  #scoreboard table {{ width: 100%; border-collapse: collapse; margin-bottom: 1rem; }}
+  .table-wrap {{ overflow-x: auto; margin-bottom: 1rem; -webkit-overflow-scrolling: touch; }}
+  .table-wrap table {{ min-width: 100%; border-collapse: collapse; }}
   #scoreboard {{ max-width: 320px; margin-bottom: 2.5rem; }}
   th, td {{ padding: 0.45rem 0.75rem; text-align: left;
              border-bottom: 1px solid var(--border); }}
@@ -524,10 +526,12 @@ def render_html(
 
 <section id="series-summary">
   <h2>Series Results</h2>
+  <div class="table-wrap">
   <table>
     <thead><tr><th>Series</th><th>Result / Status</th></tr></thead>
     <tbody>{series_rows}</tbody>
   </table>
+  </div>
 </section>
 
 {''.join(person_sections.splitlines(keepends=True))}
