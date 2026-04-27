@@ -309,6 +309,24 @@ TEAM_COLOURS: dict[str, str] = {
 }
 
 
+def _round_of(mid: str) -> int:
+    """Return the playoff round number for a matchup_id."""
+    if "_r1_" in mid:
+        return 1
+    if "_r2_" in mid:
+        return 2
+    if "_r3" in mid:
+        return 3
+    return 4  # cup
+
+
+_ROUND_DIVIDER_LABEL: dict[int, str] = {
+    2: "Round 2",
+    3: "Conference Finals",
+    4: "Stanley Cup Final",
+}
+
+
 def _team_badge(team: str | None) -> str:
     if not team:
         return "<span class='badge badge-tbd'>TBD</span>"
@@ -361,10 +379,18 @@ def render_html(
         series_rows += f"<tr><td>{desc}</td><td>{status}</td></tr>\n"
 
     # ── per-person pick tables ─────────────────────────────────────────────
+    all_mids_by_round = sorted(all_mids, key=_round_of)
     person_sections = ""
     for name, data in ranked:
         pick_rows = ""
-        for mid in all_mids:
+        current_round: int | None = None
+        for mid in all_mids_by_round:
+            r = _round_of(mid)
+            if r != current_round:
+                if current_round is not None:
+                    label = _ROUND_DIVIDER_LABEL.get(r, f"Round {r}")
+                    pick_rows += f"<tr class='round-divider'><td colspan='4'>{label}</td></tr>\n"
+                current_round = r
             b = data["breakdown"][mid]
             if not b["complete"]:
                 pick_str = _team_badge(b["pick"])
@@ -461,6 +487,17 @@ def render_html(
   tr.wrong   {{ background: var(--wrong);
                 border-left: 3px solid var(--wrong-border); }}
   tr.pending {{ color: var(--muted); }}
+  tr.round-divider td {{
+    background: #21262d;
+    color: var(--muted);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border-top: 2px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }}
   /* Person cards */
   .person-card {{ background: var(--surface); border: 1px solid var(--border);
                   border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }}

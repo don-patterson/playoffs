@@ -47,6 +47,17 @@
   tr.wrong   { background: var(--wrong);
                 border-left: 3px solid var(--wrong-border); }
   tr.pending { color: var(--muted); }
+  tr.round-divider td {
+    background: #21262d;
+    color: var(--muted);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border-top: 2px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
   /* Person cards */
   .person-card { background: var(--surface); border: 1px solid var(--border);
                   border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
@@ -65,7 +76,7 @@
 </head>
 <body>
 <h1>🏒 2026 NHL Playoff Pool</h1>
-<p class="subtitle">Last updated: 2026-04-27 10:04 UTC &nbsp;·&nbsp; Season 20252026</p>
+<p class="subtitle">Last updated: 2026-04-27 13:49 UTC &nbsp;·&nbsp; Season 20252026</p>
 
 <section id="scoreboard">
   <h2>Standings</h2>
@@ -106,16 +117,19 @@
 <tr class='pending'><td>West R1: Stars vs Wild</td><td><span class='badge' style='background:#154734'>Wild</span> in 5</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Golden Knights vs Mammoth</td><td><span class='badge' style='background:#B4975A'>Golden Knights</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Oilers vs Ducks</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Buffalo vs Bruins</td><td><span class='badge' style='background:#003087'>Buffalo</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Lightning vs Canadiens</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='correct'><td>East R1: Hurricanes vs Senators</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span> in 5</td><td class='result-cell'><span class='badge' style='background:#CC0000'>Hurricanes</span> in 4</td><td class='pts'>+2 team</td></tr>
 <tr class='pending'><td>East R1: Penguins vs Flyers</td><td><span class='badge' style='background:#FCB514'>Penguins</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Round 2</td></tr>
+<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (Buf/Bos vs TBL/MTL winner)</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (CAR/OTT vs PIT/PHI winner)</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span></td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Conference Finals</td></tr>
+<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East Conference Final</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Stanley Cup Final</td></tr>
 <tr class='pending'><td>Stanley Cup Final</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 </tbody>
   </table>
@@ -129,16 +143,19 @@
 <tr class='pending'><td>West R1: Stars vs Wild</td><td><span class='badge' style='background:#006847'>Stars</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Golden Knights vs Mammoth</td><td><span class='badge' style='background:#B4975A'>Golden Knights</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Oilers vs Ducks</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#B4975A'>Golden Knights</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Buffalo vs Bruins</td><td><span class='badge' style='background:#FFB81C'>Bruins</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Lightning vs Canadiens</td><td><span class='badge' style='background:#002868'>Lightning</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='correct'><td>East R1: Hurricanes vs Senators</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span> in 6</td><td class='result-cell'><span class='badge' style='background:#CC0000'>Hurricanes</span> in 4</td><td class='pts'>+2 team</td></tr>
 <tr class='pending'><td>East R1: Penguins vs Flyers</td><td><span class='badge' style='background:#F74902'>Flyers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Round 2</td></tr>
+<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#B4975A'>Golden Knights</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (Buf/Bos vs TBL/MTL winner)</td><td><span class='badge' style='background:#002868'>Lightning</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (CAR/OTT vs PIT/PHI winner)</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Conference Finals</td></tr>
+<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East Conference Final</td><td><span class='badge' style='background:#002868'>Lightning</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Stanley Cup Final</td></tr>
 <tr class='pending'><td>Stanley Cup Final</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 </tbody>
   </table>
@@ -152,16 +169,19 @@
 <tr class='pending'><td>West R1: Stars vs Wild</td><td><span class='badge' style='background:#154734'>Wild</span> in 5</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Golden Knights vs Mammoth</td><td><span class='badge' style='background:#B4975A'>Golden Knights</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Oilers vs Ducks</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#154734'>Wild</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#154734'>Wild</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Buffalo vs Bruins</td><td><span class='badge' style='background:#003087'>Buffalo</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Lightning vs Canadiens</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='correct'><td>East R1: Hurricanes vs Senators</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span> in 5</td><td class='result-cell'><span class='badge' style='background:#CC0000'>Hurricanes</span> in 4</td><td class='pts'>+2 team</td></tr>
 <tr class='pending'><td>East R1: Penguins vs Flyers</td><td><span class='badge' style='background:#FCB514'>Penguins</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Round 2</td></tr>
+<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#154734'>Wild</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (Buf/Bos vs TBL/MTL winner)</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (CAR/OTT vs PIT/PHI winner)</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Conference Finals</td></tr>
+<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#154734'>Wild</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East Conference Final</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Stanley Cup Final</td></tr>
 <tr class='pending'><td>Stanley Cup Final</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 </tbody>
   </table>
@@ -175,16 +195,19 @@
 <tr class='pending'><td>West R1: Stars vs Wild</td><td><span class='badge' style='background:#154734'>Wild</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Golden Knights vs Mammoth</td><td><span class='badge' style='background:#B4975A'>Golden Knights</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Oilers vs Ducks</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 5</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Buffalo vs Bruins</td><td><span class='badge' style='background:#003087'>Buffalo</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Lightning vs Canadiens</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='correct'><td>East R1: Hurricanes vs Senators</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span> in 5</td><td class='result-cell'><span class='badge' style='background:#CC0000'>Hurricanes</span> in 4</td><td class='pts'>+2 team</td></tr>
 <tr class='pending'><td>East R1: Penguins vs Flyers</td><td><span class='badge' style='background:#F74902'>Flyers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Round 2</td></tr>
+<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#6F263D'>Avalanche</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (Buf/Bos vs TBL/MTL winner)</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (CAR/OTT vs PIT/PHI winner)</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Conference Finals</td></tr>
+<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East Conference Final</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Stanley Cup Final</td></tr>
 <tr class='pending'><td>Stanley Cup Final</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 </tbody>
   </table>
@@ -198,16 +221,19 @@
 <tr class='pending'><td>West R1: Stars vs Wild</td><td><span class='badge' style='background:#154734'>Wild</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Golden Knights vs Mammoth</td><td><span class='badge' style='background:#B4975A'>Golden Knights</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Oilers vs Ducks</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#154734'>Wild</span> in 4</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Buffalo vs Bruins</td><td><span class='badge' style='background:#003087'>Buffalo</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Lightning vs Canadiens</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='correct'><td>East R1: Hurricanes vs Senators</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span> in 6</td><td class='result-cell'><span class='badge' style='background:#CC0000'>Hurricanes</span> in 4</td><td class='pts'>+2 team</td></tr>
 <tr class='pending'><td>East R1: Penguins vs Flyers</td><td><span class='badge' style='background:#FCB514'>Penguins</span> in 4</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Round 2</td></tr>
+<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#154734'>Wild</span> in 4</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (Buf/Bos vs TBL/MTL winner)</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 5</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (CAR/OTT vs PIT/PHI winner)</td><td><span class='badge' style='background:#CC0000'>Hurricanes</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Conference Finals</td></tr>
+<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East Conference Final</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Stanley Cup Final</td></tr>
 <tr class='pending'><td>Stanley Cup Final</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 4</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 </tbody>
   </table>
@@ -221,16 +247,19 @@
 <tr class='pending'><td>West R1: Stars vs Wild</td><td><span class='badge' style='background:#006847'>Stars</span> in 5</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Golden Knights vs Mammoth</td><td><span class='badge' style='background:#B4975A'>Golden Knights</span> in 5</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>West R1: Oilers vs Ducks</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 4</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#006847'>Stars</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
-<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Buffalo vs Bruins</td><td><span class='badge' style='background:#FFB81C'>Bruins</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R1: Lightning vs Canadiens</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 5</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='wrong'><td>East R1: Hurricanes vs Senators</td><td><span class='badge' style='background:#C52032'>Senators</span> in 5</td><td class='result-cell'><span class='badge' style='background:#CC0000'>Hurricanes</span> in 4</td><td class='pts'>0</td></tr>
 <tr class='pending'><td>East R1: Penguins vs Flyers</td><td><span class='badge' style='background:#FCB514'>Penguins</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Round 2</td></tr>
+<tr class='pending'><td>West R2 (Avs/Kings vs Stars/Wild winner)</td><td><span class='badge' style='background:#006847'>Stars</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='pending'><td>West R2 (GK/Mammoth vs Oilers/Ducks winner)</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (Buf/Bos vs TBL/MTL winner)</td><td><span class='badge' style='background:#AF1E2D'>Canadiens</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East R2 (CAR/OTT vs PIT/PHI winner)</td><td><span class='badge' style='background:#FCB514'>Penguins</span> in 5</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Conference Finals</td></tr>
+<tr class='pending'><td>West Conference Final</td><td><span class='badge' style='background:#FF4C00'>Oilers</span> in 6</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 <tr class='pending'><td>East Conference Final</td><td><span class='badge' style='background:#FCB514'>Penguins</span> in 5</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
+<tr class='round-divider'><td colspan='4'>Stanley Cup Final</td></tr>
 <tr class='pending'><td>Stanley Cup Final</td><td><span class='badge' style='background:#FCB514'>Penguins</span> in 7</td><td class='result-cell'>—</td><td class='pts'>—</td></tr>
 </tbody>
   </table>
