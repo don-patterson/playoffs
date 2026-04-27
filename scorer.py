@@ -14,7 +14,6 @@ Data source: NHL API  https://api-web.nhle.com/v1/playoff-series/carousel/{seaso
 import csv
 import json
 import urllib.request
-import sys
 
 # ---------------------------------------------------------------------------
 # NHL abbreviation → canonical team name (must match playoffs.py aliases)
@@ -128,7 +127,6 @@ def fetch_series_results(season: int = 20252026) -> dict[str, dict]:
     data = _fetch_json(
         f"https://api-web.nhle.com/v1/playoff-series/carousel/{season}"
     )
-    json.dump(data, sys.stderr, indent=2)
 
     # First pass: collect all series from the API keyed by (round, letter)
     raw_series: dict[str, dict] = {}  # series_letter → raw data
@@ -509,9 +507,6 @@ def render_html(
   .badge-tbd {{ background: #555; }}
   a {{ color: var(--accent); text-decoration: none; }}
   a:hover {{ text-decoration: underline; }}
-  @media (max-width: 600px) {{
-    th:nth-child(3), td:nth-child(3) {{ display: none; }}
-  }}
 </style>
 </head>
 <body>
